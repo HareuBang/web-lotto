@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-css-reset@1.4.0/dist/reset.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./category.css" />
+    <link rel="stylesheet" href="./list.css" />
+    <link rel="stylesheet" href="./floating.css" />
+    <title>Airbnb Header</title>
+  </head>
+  <body>
+    <header>
+      <!-- 로고 -->
+      <img
+        id="logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/250px-Airbnb_Logo_B%C3%A9lo.svg.png"
+        alt="airbnb logo"
+      />
+      <!-- 검색 영역 -->
+      <div id="little-search">
+        <button class="little-search_button">어디든지</button
+        ><span class="divider"></span>
+        <button class="little-search_button">언제든 일주일</button
+        ><span class="divider"></span>
+        <button class="little-search_button">게스트 추가</button>
+        <div id="material-symbols-wrapper">
+          <span id="material-search-icon" class="material-symbols-outlined">
+            search
+          </span>
+        </div>
+      </div>
+      <div id="header-right-section">
+        <div id="do-airbnb">호스팅 하기</div>
+        <div id="profile-section">
+          <span id="material-dehaze-icon" class="material-symbols-outlined">
+            dehaze
+          </span>
+          <span
+            id="material-account_circle-icon"
+            class="material-symbols-outlined"
+          >
+            account_circle
+          </span>
+        </div>
+      </div>
+    </header>
+    <div id="category-bar">
+      <button class="category-button">
+        <span class="material-symbols-outlined"> snowboarding </span>
+        <div>스노보딩</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> ice_skating </span>
+        <div>아이스 스케이팅</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> landscape </span>
+        <div>산</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> travel </span>
+        <div>여행</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> beach_access </span>
+        <div>해변</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> directions_boat </span>
+        <div>크루즈</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> pool </span>
+        <div>수영</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> scuba_diving </span>
+        <div>스쿠버 다이빙</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> surfing </span>
+        <div>서핑</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> gondola_lift </span>
+        <div>케이블카</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> forest </span>
+        <div>숲속</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> local_florist </span>
+        <div>자연</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> hiking </span>
+        <div>등산</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> camping </span>
+        <div>캠핑</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> hot_tub </span>
+        <div>온천</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> location_city </span>
+        <div>도시 여행</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> apartment </span>
+        <div>아파트</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> home </span>
+        <div>주택</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> villa </span>
+        <div>빌라</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> cottage </span>
+        <div>산장</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> bed </span>
+        <div>게스트하우스</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> fireplace </span>
+        <div>벽난로 숙소</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> hiking </span>
+        <div>트래킹</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> local_cafe </span>
+        <div>카페 투어</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> museum </span>
+        <div>박물관</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> temple_buddhist </span>
+        <div>사찰 여행</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> travel_explore </span>
+        <div>탐험 여행</div>
+      </button>
+      <button class="category-button">
+        <span class="material-symbols-outlined"> nightlife </span>
+        <div>야경</div>
+      </button>
+    </div>
+    <main>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=1"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=2"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=3"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=4"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=5"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=6"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=7"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=8"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=9"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=10"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=11"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+      <div class="place-list-item">
+        <div class="place-image-wrapper">
+          <img
+            src="https://picsum.photos/500/500?random=12"
+            alt="Lorem Picsum image"
+          />
+          <span class="material-symbols-outlined heart-icon"> favorite </span>
+        </div>
+        <div class="description-section">
+          <div>lorem ipsum</div>
+          <div>lorem ipsum 2</div>
+          <div>lorem ipsum 3</div>
+        </div>
+      </div>
+    </main>
+    <div id="floating">
+      <button id="floating-map-button">
+        <span id="floating-map-title">지도 표시하기</span>
+        <span class="material-symbols-outlined"> map </span>
+      </button>
+    </div>
+  </body>
+
+  <script>
+    document.querySelectorAll(".category-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        document
+          .getElementById("active-category-button")
+          ?.removeAttribute("id");
+        button.setAttribute("id", "active-category-button");
+      });
+    });
+  </script>
+</html>

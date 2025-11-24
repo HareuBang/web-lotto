@@ -1,0 +1,117 @@
+header {
+  height: 80px;
+  display: flex;
+  padding: 0 80px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
+}
+
+#logo {
+  height: 64px;
+  cursor: pointer;
+}
+
+#little-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  min-width: 335px;
+  height: 48px;
+  justify-content: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  cursor: pointer;
+}
+
+#little-search:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+#little-search * {
+  cursor: pointer;
+}
+
+.little-search_button {
+  padding: 0 16px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+.little-search_button:nth-of-type(3) {
+  color: #717171;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.divider {
+  flex-basis: 1px;
+  flex-shrink: 0;
+  background-color: #ddd;
+  height: 24px;
+}
+
+#material-symbols-wrapper {
+  /* 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ff385c;
+  border-radius: 50%;
+  flex-basis: 32px; /* width */
+  flex-shrink: 0;
+  height: 32px;
+}
+
+#material-search-icon {
+  width: 12px;
+  color: #fff;
+}
+
+#header-right-section {
+  display: flex;
+  gap: 8px;
+}
+
+#do-airbnb {
+  padding: 12px;
+  font-size: 14px;
+  color: #222;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+#do-airbnb:hover {
+  background-color: #f7f7f7;
+}
+
+#profile-section {
+  display: flex;
+  padding: 5px 5px 5px 12px;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 21px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+#profile-section:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+#material-dehaze-icon {
+  width: 16px;
+}
+
+#material-account_circle-icon {
+  width: 30px;
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Fast Bank</title>
+  </head>
+  <body>
+    <div id="main-img-wrapper">
+      <img
+        width="320"
+        src="https://recruit.kakaobank.com/_next/static/media/02-img-hands.49cd2bd35e71288bc5d65f7c7fd43ed9.png"
+        alt="main image"
+      />
+    </div>
+    <div id="intro-main">
+      <p>이미 모두의 은행 카카오뱅크,</p>
+      <p>함께 일해요.</p>
+      <p id="join-us-text">join us!</p>
+      <span id="down-arrow-icon" class="material-symbols-outlined">
+        keyboard_arrow_down
+      </span>
+    </div>
+    <ul id="list-item-wrapper">
+      <li>26주적금</li>
+      <li class="list-item">저금통</li>
+      <li class="list-item">비상금대출</li>
+      <li class="list-item">입출금통장</li>
+      <li class="list-item">세이프박스</li>
+      <li class="list-item">자유적금</li>
+      <li class="list-item">정기예금</li>
+      <li class="list-item">내신용정보</li>
+      <li class="list-item">실험실</li>
+      <li class="list-item">마이너스통장대출</li>
+      <li class="list-item">휴면예금/보험금찾기</li>
+      <li class="list-item">개인사업자대출</li>
+      <li class="list-item">해외송금받기</li>
+      <li class="list-item">인증</li>
+      <li class="list-item">간편이체</li>
+      <li class="list-item">전월세보증금대출</li>
+      <li class="list-item">프렌즈체크카드</li>
+      <li class="list-item">모임통장</li>
+      <li class="list-item">카카오뱅크mini</li>
+      <li class="list-item">신용대출</li>
+      <li class="list-item">증권사주식계좌</li>
+      <li class="list-item">제휴신용카드</li>
+      <li class="list-item">연계대출</li>
+      <li class="list-item">개인사업자뱅킹</li>
+      <li class="list-item">기록통장</li>
+      <li class="list-item">개인금고</li>
+      <li class="list-item">혜택좋은신용카드</li>
+      <li class="list-item">중고차구매대출</li>
+      <li class="list-item">쿠폰사고팔기</li>
+      <li class="list-item">한달적금</li>
+      <li class="list-item">신용대출비교하기</li>
+    </ul>
+    <main>
+      <section id="panel1-img">
+        <img
+          id="flying-santa-image"
+          src="./santa_flying.png"
+          alt="santa flying"
+        />
+      </section>
+      <section id="video-section">
+        <div id="fixed-wrapper">
+          <video
+            id="video"
+            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+            type="video/mp4"
+            muted
+            loop
+          ></video>
+          <div id="fixed-description">
+            <div>혁신이 만든</div>
+            <div>압도적인 성장</div>
+          </div>
+        </div>
+      </section>
+      <div id="bank-beyond-wrapper">
+        <div id="bank-beyond">
+          <img
+            width="315"
+            src="./bank-beyond.png"
+            alt="sample bank beyond image"
+          />
+        </div>
+      </div>
+      <div id="white-wrapper">
+        <div id="slider-container">
+          <div id="slider-content-wrapper">
+            <div id="slider-content">
+              <img
+                src="https://i.namu.wiki/i/A17xmXfy0SWxeHkU1dKu3bddgrIiTokDXHBaFv3NFvSSk1QekslWhiOc4rrEv05Dik0doiAyzK9OODMK8OBcg6-QC-H1adbxlkcuzG9U2bPNssQO47-UWKH-Qn5PO96LoP5Oom_K5Y1e8ca9xjmPaQ.svg"
+                class="slider-image"
+                alt="HTML image"
+              />
+              <img
+                src="https://i.namu.wiki/i/sMTbgm8nz-boeP1IY-yT60auCw90W37TtkRszLJ8cDnpT6Ss103M3S5BRJ51vsVpnEoDwFunIu2cZdSVj25Hwyr7E7hDdhU5vknPKTlcoyqlFPA7Ny-VTwLTvp2amxnh5lfItKoL90V-C5CBDUvLAg.svg"
+                class="slider-image"
+                alt="picsum photos"
+              />
+              <img
+                src="https://i.namu.wiki/i/_V6k4Iwo1r5iWb3mNezRkz4sN5GA8AKr7x5mqEGSZNovVFuHlumDlQeEKzx3kf8EeJPWnv3mB__BT-UW3_M0hU5TtjcluKOHY-sOKfcI3NIU8heTlr7G30NILkbbPl2RtO7HJj5ssOjxoQi0-S3SEw.svg"
+                class="slider-image"
+                alt="picsum photos"
+              />
+            </div>
+          </div>
+          <div class="slider-button" id="left-button">&lt;</div>
+          <div class="slider-button" id="right-button">&gt;</div>
+          <div id="slider-index">1/3</div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    const listStyleChangeStartY = 373;
+    const listStyleChangeEndY = 1585;
+    const listItems = document.querySelectorAll(".list-item");
+    const division =
+      (listStyleChangeEndY - listStyleChangeStartY) / listItems.length;
+    const panel1Img = document.getElementById("panel1-img");
+    const flyingSantaImage = document.getElementById("flying-santa-image");
+    const videoPlayBack = 500;
+    const videoSection = document.getElementById("video-section");
+    const fixedWrapper = document.getElementById("fixed-wrapper");
+    const videoElement = document.getElementById("video");
+    const fixedDescription = document.getElementById("fixed-description");
+    const fixedDescriptionOnAppearTiming = 3470;
+    const fixedDescriptionOnAppearEnds = 3800;
+
+    function centerElement(elementId, video) {
+      const element = document.getElementById(elementId);
+      const parent = element.parentElement;
+
+      if (
+        window.scrollY >
+        parent.offsetTop -
+          (document.documentElement.clientHeight - element.offsetHeight) / 2
+      ) {
+        element.style.position = "fixed";
+        element.style.top = "50%";
+        element.style.left = "50%";
+        element.style.transform = "translate(-50%, -50%)";
+
+        if (video)
+          video.currentTime =
+            (window.scrollY - videoSection.offsetTop) / videoPlayBack;
+      } else {
+        element.style.position = "relative";
+        element.style.top = "initial";
+        element.style.left = "initial";
+        element.style.transform = "initial";
+      }
+    }
+
+    videoElement.addEventListener("loadedmetadata", () => {
+      document.getElementById("video-section").style.height =
+        videoElement.duration * videoPlayBack + "px";
+    });
+
+    window.addEventListener("scroll", () => {
+      console.log(document.getElementById("list-item-wrapper").offsetTop);
+
+      // list-item
+      if (document.getElementById("on"))
+        document.getElementById("on").removeAttribute("id");
+
+      if (
+        window.scrollY > listStyleChangeStartY &&
+        window.screenY < listStyleChangeEndY
+      ) {
+        const targetIndex = Math.floor(
+          (window.scrollY - listStyleChangeStartY) / division
+        );
+        if (listItems[targetIndex]) listItems[targetIndex].id = "on";
+      }
+
+      // santa-flying
+      const scrollYBottom =
+        window.scrollY + document.documentElement.clientHeight;
+
+      if (
+        scrollYBottom > panel1Img.offsetTop &&
+        scrollYBottom < panel1Img.offsetTop + panel1Img.offsetHeight + 100
+      ) {
+        const translateX =
+          -78 +
+          (78 * 1.3 * (scrollYBottom - panel1Img.offsetTop)) /
+            (panel1Img.offsetHeight + 100);
+        const translateY =
+          -13 +
+          (13 * (scrollYBottom - panel1Img.offsetTop)) /
+            (panel1Img.offsetHeight + 100);
+        const rotationDegree =
+          23 -
+          (23 * 1.7 * (scrollYBottom - panel1Img.offsetTop)) /
+            (panel1Img.offsetHeight + 100);
+        flyingSantaImage.style.transform = `translate(${translateX}px, ${translateY}px) rotate(${rotationDegree}deg)`;
+      }
+
+      // video
+      centerElement("fixed-wrapper", videoElement);
+
+      if (
+        window.scrollY >
+        videoSection.offsetTop +
+          videoSection.offsetHeight -
+          (fixedWrapper.offsetHeight +
+            (document.documentElement.clientHeight -
+              fixedWrapper.offsetHeight) /
+              2)
+      ) {
+        fixedWrapper.style.position = "relative";
+        fixedWrapper.style.top = "initial";
+        fixedWrapper.style.left = "initial";
+        fixedWrapper.style.transform = `translateY(${
+          videoSection.offsetHeight - fixedWrapper.offsetHeight
+        }px)`;
+      }
+
+      // fixed description
+      if (
+        window.scrollY > fixedDescriptionOnAppearTiming &&
+        window.scrollY < fixedDescriptionOnAppearEnds
+      ) {
+        fixedDescription.style.transform = `translateY(${
+          fixedDescriptionOnAppearEnds - window.scrollY
+        }px)`;
+
+        fixedDescription.style.opacity =
+          (window.scrollY - fixedDescriptionOnAppearTiming) / 300;
+      } else if (window.scrollY > fixedDescriptionOnAppearEnds) {
+        fixedDescription.style.transform = `translateY(0px)`;
+        fixedDescription.style.opacity = 1;
+      } else {
+        fixedDescription.style.transform = `translateY(100px)`;
+        fixedDescription.style.opacity = 0;
+      }
+
+      centerElement("bank-beyond");
+    });
+
+    // slider
+    let currentImage = 0;
+    const sliderImages = document.querySelectorAll(".slider-image");
+    const sliderContentWrapper = document.getElementById(
+      "slider-content-wrapper"
+    );
+    const sliderIndex = document.getElementById("slider-index");
+    const handleSlideChange = (step) => {
+      currentImage += step;
+
+      if (currentImage < 0) {
+        currentImage = sliderImages.length - 1;
+      } else if (currentImage >= sliderImages.length) {
+        currentImage = 0;
+      }
+
+      sliderContentWrapper.scrollLeft = sliderImages[currentImage].offsetLeft;
+      sliderIndex.innerText = `${currentImage + 1}/${sliderImages.length}`;
+    };
+
+    document.getElementById("left-button").addEventListener("click", () => {
+      handleSlideChange(-1);
+    });
+    document.getElementById("right-button").addEventListener("click", () => {
+      handleSlideChange(1);
+    });
+
+    // 버튼 클릭이 아닌 스크롤 시
+    sliderContentWrapper.addEventListener("scroll", () => {
+      const imageWidth =
+        document.querySelectorAll(".slider-image")[0].offsetWidth;
+      currentImage = Math.floor(sliderContentWrapper.scrollLeft / imageWidth);
+      sliderIndex.innerText = `${currentImage + 1}/${sliderImages.length}`;
+    });
+  </script>
+</html>

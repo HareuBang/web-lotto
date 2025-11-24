@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Interactive Web</title>
+  </head>
+  <body>
+    <div class="cursor">
+      <div class="cursor__default">
+        <span class="cursor__default__inner"> </span>
+      </div>
+      <div class="cursor__trace">
+        <span class="cursor__trace__inner"></span>
+      </div>
+    </div>
+    <section class="preloader">
+      <button class="preloader__btn">
+        <span class="preloader__btn_hold">Hold</span>
+      </button>
+    </section>
+
+    <section class="header hidden-area">
+      <span class="circle" id="circle-1"></span>
+      <span class="circle" id="circle-2"></span>
+      <span id="material__symbol_1" class="material-symbols-outlined">
+        cruelty_free
+      </span>
+      <span id="material__symbol_2" class="material-symbols-outlined">
+        pets
+      </span>
+      <span id="material__symbol_3" class="material-symbols-outlined">
+        owl
+      </span>
+      <span id="material__symbol_4" class="material-symbols-outlined">
+        sound_detection_dog_barking
+      </span>
+      <h1 class="header__title">
+        <div>LAST ART</div>
+        <div>PROJECTS</div>
+      </h1>
+    </section>
+    <section class="poster hidden-area">
+      <div class="poster__parallax">
+        <div id="poster-image_wrapper_1" class="poster-image_wrapper">
+          <img
+            id="poster-image_1"
+            src="./images/poster_image_1.png"
+            alt=""
+            class="poster-image"
+          />
+        </div>
+        <div id="poster-image_wrapper_2" class="poster-image_wrapper">
+          <img
+            id="poster-image_2"
+            src="./images/poster_image_2.png"
+            alt=""
+            class="poster-image"
+          />
+        </div>
+        <div id="poster-image_wrapper_3" class="poster-image_wrapper">
+          <img
+            id="poster-image_3"
+            src="./images/poster_image_3.png"
+            alt=""
+            class="poster-image"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    document.addEventListener("mousemove", (event) => {
+      const cursorDefaultInner = document.querySelector(
+        ".cursor__default__inner"
+      );
+      const cursorTraceInner = document.querySelector(".cursor__trace__inner");
+
+      cursorDefaultInner.style.top = event.clientY + "px";
+      cursorDefaultInner.style.left = event.clientX + "px";
+      cursorTraceInner.style.top = event.clientY + "px";
+      cursorTraceInner.style.left = event.clientX + "px";
+    });
+
+    const cursor = document.querySelector(".cursor");
+    document.addEventListener("mousedown", () => {
+      cursor.classList.add("cursor--active");
+    });
+    document.addEventListener("mouseup", () => {
+      cursor.classList.remove("cursor--active");
+    });
+
+    const createRipple = (event) => {
+      let ripple = document.createElement("span");
+
+      ripple.classList.add("ripple");
+
+      cursor.appendChild(ripple);
+
+      ripple.style.top = event.clientY - ripple.clientHeight / 2 + "px";
+      ripple.style.left = event.clientX - ripple.clientWidth / 2 + "px";
+
+      ripple.addEventListener("animationend", () => {
+        cursor.removeChild(ripple);
+      });
+    };
+
+    document.addEventListener("click", (event) => {
+      createRipple(event);
+    });
+
+    let intervalId = null;
+    let scale = 1;
+    const header = document.querySelector(".header");
+    const preloaderBtn = document.querySelector(".preloader__btn");
+    const preloaderHideThreshold = 18;
+
+    const setPreloaderStyle = (scale) => {
+      preloaderBtn.style.transform = `scale(${scale})`;
+      document.querySelector(".preloader__btn_hold").style.opacity =
+        1 - (scale - 1) / preloaderHideThreshold;
+    };
+
+    preloaderBtn.addEventListener("mousedown", () => {
+      intervalId = setInterval(() => {
+        scale += 0.175;
+
+        setPreloaderStyle(scale);
+
+        if (scale > preloaderHideThreshold) {
+          document.querySelector(".preloader").classList.add("hidden-area");
+          header.classList.remove("hidden-area");
+          header.classList.add("show-area");
+
+          const poster = document.querySelector(".poster");
+          poster.classList.remove("hidden-area");
+          poster.classList.add("show-area");
+
+          clearInterval(intervalId);
+        }
+      }, 10);
+    });
+
+    preloaderBtn.addEventListener("mouseup", () => {
+      clearInterval(intervalId);
+
+      intervalId = setInterval(() => {
+        scale -= 0.075;
+
+        if (scale <= 1) clearInterval(intervalId);
+
+        setPreloaderStyle(scale);
+      }, 10);
+    });
+
+    header.addEventListener("mousemove", (event) => {
+      const xRelativeToHeader = event.clientX / header.clientWidth;
+      const yRelativeToHeader = event.clientY / header.clientHeight;
+
+      document.querySelector(".header__title").style.transform = `translate(${
+        xRelativeToHeader * -50
+      }px, ${yRelativeToHeader * -50}px)`;
+
+      document.getElementById("circle-1").style.transform = `translate(${
+        xRelativeToHeader * -25
+      }px, ${yRelativeToHeader * -25}px)`;
+
+      document.getElementById("circle-2").style.transform = `translate(${
+        xRelativeToHeader * 25
+      }px, ${yRelativeToHeader * 25}px)`;
+
+      document.getElementById(
+        "material__symbol_1"
+      ).style.transform = `translate(${xRelativeToHeader * -15}px, ${
+        yRelativeToHeader * -15
+      }px)`;
+      document.getElementById(
+        "material__symbol_2"
+      ).style.transform = `translate(${xRelativeToHeader * -8}px, ${
+        yRelativeToHeader * -8
+      }px)`;
+      document.getElementById(
+        "material__symbol_3"
+      ).style.transform = `translate(${xRelativeToHeader * -20}px, ${
+        yRelativeToHeader * -20
+      }px)`;
+      document.getElementById(
+        "material__symbol_4"
+      ).style.transform = `translate(${xRelativeToHeader * 5}px, ${
+        yRelativeToHeader * 5
+      }px)`;
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("poster-image_state_visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    document
+      .querySelectorAll(".poster-image_wrapper")
+      .forEach((poster) => observer.observe(poster));
+
+    const posterParallax = document.querySelector(".poster__parallax");
+
+    posterParallax.addEventListener("mousemove", (event) => {
+      const xRelativeToPosterParallax =
+        event.clientX / posterParallax.clientWidth;
+      const yRelativeToHeader = event.clientY / posterParallax.clientHeight;
+
+      document.getElementById(
+        "poster-image_wrapper_2"
+      ).style.transform = `translate(${xRelativeToPosterParallax * -40}px, ${
+        yRelativeToHeader * -40
+      }px)`;
+      document.getElementById(
+        "poster-image_wrapper_3"
+      ).style.transform = `translate(${xRelativeToPosterParallax * 40}px, ${
+        yRelativeToHeader * 40
+      }px)`;
+    });
+  </script>
+</html>
