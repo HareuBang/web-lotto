@@ -1,0 +1,226 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12.5vw 0;
+}
+
+#main-left-wrapper img {
+  width: 42vw;
+}
+
+#main-right-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vw;
+}
+
+/* main description */
+.main-description > div {
+  font-family: "Pangolin", cursive;
+  font-size: 3.6vw;
+  line-height: 4.3vw;
+}
+
+.description_1 {
+  transform: rotate(-2.2deg);
+}
+
+.description_2 {
+  transform: rotate(1.3deg) translateX(2.4vw);
+}
+
+.description_3 {
+  transform: rotate(-1.9deg);
+}
+
+/* main btn */
+.main-button-wrapper a {
+  padding: 1.1vw 2.5vw;
+  border-radius: 100vw;
+  font-weight: 700;
+  font-size: 1.1vw;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.5s;
+}
+
+#btn-purchase {
+  background-color: var(--yellow);
+  color: var(--gray);
+}
+
+#btn-purchase::before,
+#btn-view-payout-details::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
+  z-index: -1;
+}
+
+#btn-purchase:hover::before,
+#btn-view-payout-details:hover::before {
+  transform: translateY(0);
+}
+
+#btn-view-payout-details {
+  border: 1px solid var(--light-brown);
+  color: var(--light-brown);
+}
+
+#btn-view-payout-details:hover {
+  color: var(--gray);
+}
+
+/* Lotto Payout Details */
+#lotto-payout-details {
+  background-color: var(--black);
+  border-radius: 5%;
+  font-family: "Pangolin", cursive;
+  color: var(--bg-color);
+  padding-bottom: 0.5vw;
+}
+
+#lotto-payout-details .title {
+  text-align: center;
+  font-size: 4.7vw;
+  font-weight: 800;
+  padding-top: 3.4vw;
+}
+
+#lotto-payout-details table {
+  margin: 2.3vw auto;
+  font-size: 2.7vw;
+}
+
+#lotto-payout-details td,
+#lotto-payout-details th {
+  padding: 2.2vw 4.2vw;
+}
+
+.prize-number {
+  text-align: center;
+}
+
+#prize-number_1 {
+  color: var(--red);
+}
+
+#prize-number_2 {
+  color: var(--yellow);
+}
+
+#prize-number_3 {
+  color: var(--purple);
+}
+
+/* Credits */
+#credits {
+  height: 100vh;
+}
+
+#card-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  width: 34vw;
+  height: 26vw;
+  background-color: var(--bg-color);
+  border: 0.5vw solid;
+  border-radius: 1.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.3vw;
+  padding: 2.2vw;
+  transition: transform 0.55s cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 0.45s ease;
+}
+
+.card .card-img {
+  width: 8.3vw;
+}
+
+.card .title {
+  font-family: "Pangolin", cursive;
+  font-size: 4.1vw;
+  font-weight: 500;
+}
+
+.card .description {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1vw;
+}
+
+.card a {
+  padding: 1.2vw;
+  border-radius: 40px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.9vw;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.card:nth-child(1) {
+  border-color: var(--yellow);
+  transform: rotate(4deg);
+}
+
+.card:nth-child(2) {
+  border-color: var(--red);
+  transform: rotate(-4deg);
+}
+
+.card:nth-child(3) {
+  border-color: var(--purple);
+  transform: rotate(-0.5deg);
+}
+
+.card:nth-child(4) {
+  border-color: var(--yellow);
+  transform: rotate(1.2deg);
+}
+
+.card:nth-child(1) a {
+  background-color: var(--yellow);
+}
+
+.card:nth-child(2) a {
+  background-color: var(--red);
+}
+
+.card:nth-child(3) a {
+  background-color: var(--purple);
+}
+
+.card:nth-child(4) a {
+  background-color: var(--yellow);
+}
+
+.card a:hover {
+  background-color: var(--gray);
+  border: 1px solid var(--black);
+  color: var(--black);
+}

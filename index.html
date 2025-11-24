@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Reset -->
+    <link rel="stylesheet" href="../reset.css" />
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- default font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- logo font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pangolin&family=Permanent+Marker&family=Raleway:ital,wght@0,100..900;1,100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- main font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pangolin&family=Permanent+Marker&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css//global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/index.js" defer></script>
+    <title>Lotto</title>
+  </head>
+  <body>
+    <nav>
+      <div id="nav-left-wrapper">
+        <a class="nav-wrapper" href="index.html#credits">
+          <div class="nav-icon">
+            <span class="material-symbols-outlined"> attribution </span>
+          </div>
+          Credits
+        </a>
+        <a
+          class="nav-wrapper"
+          href="https://github.com/HareuBang/javascript-lotto-8/tree/HareuBang"
+          target="_blank"
+        >
+          <div class="nav-icon">
+            <img
+              class="nav-icons-img"
+              src="./assets/svg/github.svg"
+              alt="Simple Icons Github"
+            />
+          </div>
+          Original JS Repo
+        </a>
+      </div>
+      <a id="title" href="">LOTTO</a>
+      <div id="nav-right-wrapper">
+        <a class="nav-wrapper nav-wrapper-black" href="">
+          <div class="nav-icon">
+            <img
+              class="nav-icons-img"
+              src="./assets/svg/github.svg"
+              alt="Simple Icons Github"
+            />
+          </div>
+          This Project's Repo
+        </a>
+      </div>
+    </nav>
+    <main>
+      <section id="main-left-wrapper">
+        <img id="main-img" src="assets/images/main.png" alt="main lotto img" />
+      </section>
+      <section id="main-right-wrapper">
+        <section class="main-description">
+          <div class="description_1">Dream Big</div>
+          <div class="description_2">with Lotto Simulation.</div>
+          <div class="description_3">Test Your Luck!</div>
+        </section>
+        <section class="main-button-wrapper">
+          <a id="btn-purchase" href="lotto.html">Buy Lotto Tickets</a>
+          <a id="btn-view-payout-details" href="#lotto-payout-details"
+            >View Payout Details</a
+          >
+        </section>
+      </section>
+    </main>
+    <div id="lotto-payout-details">
+      <div class="title">WINNING CRITERIA</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Prize Tier</th>
+            <th>Matching Numbers</th>
+            <th>Estimated Prize</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="prize-number_1" class="prize-number">1st</td>
+            <td class="prize-match">6 Numbers Match</td>
+            <td>₩2,000,000,000</td>
+          </tr>
+          <tr>
+            <td id="prize-number_2" class="prize-number">2nd</td>
+            <td class="prize-match">5 Numbers +<br />Bonus Ball Match</td>
+            <td>₩30,000,000</td>
+          </tr>
+          <tr>
+            <td id="prize-number_3" class="prize-number">3rd</td>
+            <td class="prize-match">5 Numbers Match</td>
+            <td>₩1,500,000</td>
+          </tr>
+          <tr>
+            <td class="prize-number">4th</td>
+            <td class="prize-match">4 Numbers Match</td>
+            <td>₩50,000</td>
+          </tr>
+          <tr>
+            <td class="prize-number">5th</td>
+            <td class="prize-match">3 Numbers Match</td>
+            <td>₩5,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="credits">
+      <div id="card-stack">
+        <div class="card">
+          <div class="card-img">
+            <img src="./assets/svg/css.svg" alt="css Simple Icons" />
+          </div>
+          <div class="title">CSS Reset</div>
+          <div class="description"></div>
+          <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank"
+            >View Resource</a
+          >
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./assets/svg/simpleicons.svg"
+              alt="simpleicons Simple Icons"
+            />
+          </div>
+          <div class="title">Simple Icons</div>
+          <div class="description">
+            github, figma, simpleicons, googlefonts, css
+          </div>
+          <a href="https://simpleicons.org/" target="_blank">View Resource</a>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./assets/svg/googlefonts.svg"
+              alt="google fonts Simple Icons"
+            />
+          </div>
+          <div class="title">Google Fonts</div>
+          <div class="description">STIX Two Text, Pangolin, Raleway</div>
+          <a href="https://fonts.google.com/" target="_blank">View Resource</a>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./assets/svg/figma.svg" alt="figma Simple Icons" />
+          </div>
+          <div class="title">Figma</div>
+          <div class="description">Ticket Image</div>
+          <a
+            href="https://www.figma.com/community/file/1149757894526455175"
+            target="_blank"
+            >View Resource</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

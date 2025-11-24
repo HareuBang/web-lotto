@@ -1,0 +1,99 @@
+:root {
+  --bg-color: #f9f2e9;
+  --black: #1e1e1e;
+  --light-brown: #a79785;
+  --white: #ffffff;
+  --yellow: #f0b420;
+  --purple: #b0a5f4;
+  --red: #f36c5a;
+  --light-brown-gray: #f2e8dc;
+  --gray: #fffaf3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--black);
+}
+
+/* nav */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7vw 1.6vw;
+  font-weight: 600;
+  font-size: 0.9vw;
+}
+
+#nav-left-wrapper,
+#nav-right-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9vw;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.3vw;
+  background-color: var(--light-brown-gray);
+  border-radius: 100vw;
+  padding: 0.3vw 1.1vw 0.3vw 0.3vw;
+  transition: background-color 0.5s;
+}
+
+.nav-wrapper:hover {
+  background-color: var(--light-brown);
+}
+
+.nav-wrapper .material-symbols-outlined {
+  font-size: 1.3vw;
+}
+
+.nav-wrapper .nav-icons-img {
+  width: 1.1vw;
+  height: 1.1vw;
+}
+
+.nav-wrapper-black {
+  background-color: var(--black);
+  color: var(--gray);
+  border: 1px solid var(--black);
+}
+
+.nav-wrapper-black:hover {
+  background-color: var(--gray);
+  color: var(--black);
+}
+
+.nav-icon {
+  width: 1.7vw;
+  height: 1.7vw;
+  background-color: var(--light-brown);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-right-wrapper .nav-icon {
+  background-color: var(--white);
+}
+
+#title {
+  font-family: "STIX Two Text", serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+}

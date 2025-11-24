@@ -1,0 +1,441 @@
+body {
+  overflow: hidden;
+}
+
+#wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+#left-wrapper,
+#right-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.error-message {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.9vw;
+}
+
+/* input 스핀 버튼 제거 (Chrome, Safari, Edge, Opera) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* 1. purchase - left */
+.purchase-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4vw;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#purchase-description {
+  text-align: center;
+}
+
+#purchase-title {
+  font-family: "Pangolin", cursive;
+  color: var(--black);
+  font-size: 4.1vw;
+  font-weight: 400;
+  line-height: 90%;
+}
+
+#purchase-title .title-color {
+  color: var(--yellow);
+}
+
+#purchase-title .title-translate {
+  display: inline-block;
+  margin-bottom: 1.3vw;
+  color: var(--red);
+  transform: translateX(50%);
+}
+
+#purchase-subtitle {
+  font-family: "Raleway", sans-serif;
+  color: var(--black);
+  font-size: 0.75vw;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#purchase-subtitle .title-color {
+  color: var(--purple);
+}
+
+#input-wrapper {
+  width: 100%;
+  padding: 0.9vw 1.3vw;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 50px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+#input-wrapper:focus-within {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.purchase-input-money-icon {
+  padding-right: 0.9vw;
+  margin: 0 auto;
+  color: var(--light-black);
+}
+
+#purchase-amount {
+  flex-grow: 1;
+  font-size: 0.9vw;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* 1. purchase - right */
+#right-purchase-wrapper {
+  transition: opacity 0.5s ease;
+}
+
+#right-purchase-wrapper img {
+  width: 42vw;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+/* 2. lotto ticket - left */
+#left-ticket-wrapper {
+  width: 100%;
+  height: 100%;
+  bottom: -120%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: bottom 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#left-ticket-wrapper.slide-bottom-up {
+  bottom: 0;
+}
+
+.ticket {
+  position: relative;
+}
+
+.ticket svg {
+  width: 22vw;
+  height: 41vw;
+}
+
+#lotto-list-area {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  right: 8%;
+  bottom: 25%;
+  overflow-y: auto;
+  padding: 1.3vw;
+}
+
+.lotto-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.7vw;
+  padding-bottom: 0.8vw;
+  border-bottom: 1px dashed #ddd;
+}
+
+.ball {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.4vw;
+  height: 1.4vw;
+  border-radius: 50%;
+  font-size: 0.8vw;
+  font-weight: 700;
+  color: var(--white);
+  margin-left: 0.2vw;
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.b-1 {
+  background: #fbc400;
+}
+
+.b-2 {
+  background: #69c8f2;
+}
+
+.b-3 {
+  background: #ff7272;
+}
+
+.b-4 {
+  background: #aaaaaa;
+}
+
+.b-5 {
+  background: #b0d840;
+}
+
+/* 3. winning wrapper - right */
+#winning-wrapper {
+  display: none;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 40px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 2.5vw;
+}
+
+#winning-wrapper .winning-input-wrapper {
+  display: flex;
+  gap: 1.4vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s ease;
+}
+
+#winning-title {
+  font-family: "Pangolin", cursive;
+  color: var(--black);
+  font-size: 1.8vw;
+}
+
+#inputs-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2vw;
+}
+
+#inputs-wrapper .winning-input {
+  width: 2.6vw;
+  height: 2.6vw;
+  text-align: center;
+  color: var(--black);
+  outline: none;
+  margin: 0.1vw;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+#inputs-wrapper .winning-input:focus {
+  border-color: var(--purple);
+  transform: scale(1.1);
+}
+
+#inputs-wrapper .winning-input::placeholder {
+  font-weight: 600;
+}
+
+#bonus-input-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4vw;
+}
+
+#bonus-span {
+  color: var(--light-black);
+  font-size: 0.9vw;
+  font-weight: 600;
+}
+
+.bonus-input {
+  width: 2.6vw;
+  height: 2.6vw;
+  text-align: center;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  color: var(--black);
+  outline: none;
+  transition: 0.2s;
+}
+
+.bonus-input:focus {
+  border-color: var(--red);
+  transform: scale(1.1);
+}
+
+#winning-check-btn {
+  padding: 0.9vw 2vw;
+  background-color: var(--purple);
+  border: none;
+  border-radius: 100vw;
+  font-family: "Pangolin", cursive;
+  color: var(--white);
+  font-size: 1.2vw;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  position: relative;
+  display: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#winning-check-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
+  z-index: -1;
+}
+
+#winning-check-btn:hover::before {
+  transform: translateY(0);
+}
+
+@keyframes slideToRightFromLeft {
+  0% {
+    transform: translateX(120%) rotate(-25deg);
+    opacity: 0;
+  }
+  55% {
+    transform: translateX(-11%) rotate(-8deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-13%) rotate(4deg);
+  }
+  100% {
+    transform: translateX(-15%) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.winning-result-wrapper {
+  width: 35.9vw;
+  height: 41.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  background: var(--gray);
+  border-radius: 40px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 2.5vw;
+  font-family: "Pangolin", cursive;
+  font-size: 1.8vw;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transform: translateX(120%);
+}
+
+.winning-result-wrapper.slide-active {
+  animation: slideToRightFromLeft 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+#winning-result {
+  text-align: center;
+  font-size: 1.1vw;
+  line-height: 1.6;
+  color: var(--light-black);
+}
+
+#winning-result table {
+  margin-bottom: 2vw;
+}
+
+#winning-result thead th {
+  padding: 0.3vw 0.5vw;
+  font-weight: 700;
+}
+
+#winning-result table td {
+  padding: 0.3vw 0.5vw;
+}
+
+#winning-result .result-title {
+  font-size: 1.1vw;
+  font-weight: 800;
+}
+
+#winning-result table #prize-number_1 {
+  color: var(--red);
+}
+
+#winning-result table #prize-number_2 {
+  color: var(--yellow);
+}
+
+#winning-result table #prize-number_3 {
+  color: var(--purple);
+}
+
+#winning-result table .prize-match {
+  text-align: center;
+}
+
+#winning-result-lotto-numbers-wrapper {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+#total-roi-value {
+  font-weight: 700;
+  color: var(--red);
+}
+
+#reset-btn {
+  padding: 0.6vw 2vw;
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 100vw;
+  font-family: "Pangolin", cursive;
+  color: var(--white);
+  font-size: 1.2vw;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#reset-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
+  z-index: -1;
+}
+
+#reset-btn:hover::before {
+  transform: translateY(0);
+}
